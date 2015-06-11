@@ -15,14 +15,17 @@ module AndroidLintTranslateCheckstyleFormat
 
       checkstyle = doc.add_element("checkstyle")
       xml['issues']['issue'].each do |issue|
-        file = checkstyle.add_element("file", {
-          'name' => issue['location']['@file']
-          })
-        file.add_element("error", {
-          'line' => issue['location']['@line'],
-          'severity' => issue['severity'],
-          'message' => "[#{issue['@id']}] #{issue['@message']}\n #{issue['@explanation']}"
-          })
+        locations = issue['location'].is_a?(Array) ? issue['location'] : [issue['location']]
+        locations.each do |location|
+          file = checkstyle.add_element("file", {
+            'name' => location['@file']
+            })
+          file.add_element("error", {
+            'line' => location['@line'],
+            'severity' => issue['severity'],
+            'message' => "[#{issue['@id']}] #{issue['@message']}\n #{issue['@explanation']}"
+            })
+        end
       end
 
       doc

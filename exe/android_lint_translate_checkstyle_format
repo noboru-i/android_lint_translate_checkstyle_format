@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'android_lint_translate_checkstyle_format'
+require 'android_lint_translate_checkstyle_format/cli'
+
+AndroidLintTranslateCheckstyleFormat::CLI.start

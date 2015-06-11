@@ -1,5 +1,5 @@
 require "android_lint_translate_checkstyle_format/version"
+require "android_lint_translate_checkstyle_format/translate"
 
 module AndroidLintTranslateCheckstyleFormat
-  # Your code goes here...
 end

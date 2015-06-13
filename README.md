@@ -1,8 +1,11 @@
 # AndroidLintTranslateCheckstyleFormat
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/android_lint_translate_checkstyle_format`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Gem Version](https://badge.fury.io/rb/android_lint_translate_checkstyle_format.svg)](http://badge.fury.io/rb/android_lint_translate_checkstyle_format)
+[![Build Status](https://travis-ci.org/noboru-i/android_lint_translate_checkstyle_format.svg)](https://travis-ci.org/noboru-i/android_lint_translate_checkstyle_format)
+[![Code Climate](https://codeclimate.com/github/noboru-i/android_lint_translate_checkstyle_format/badges/gpa.svg)](https://codeclimate.com/github/noboru-i/android_lint_translate_checkstyle_format)
+[![Coverage Status](https://coveralls.io/repos/noboru-i/android_lint_translate_checkstyle_format/badge.svg)](https://coveralls.io/r/noboru-i/android_lint_translate_checkstyle_format)
 
-TODO: Delete this and the text above, and describe your gem
+Translate android lint format into checkstyle format.
 
 ## Installation
 
@@ -22,7 +25,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Use pipe
+
+```
+cat checkstyle.xml | android_lint_translate_checkstyle_format translate
+```
+
+### Use command-line option
+
+```
+android_lint_translate_checkstyle_format translate --file="checkstyle.xml"
+```
 
 ## Development
 

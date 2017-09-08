@@ -37,6 +37,14 @@ cat checkstyle.xml | android_lint_translate_checkstyle_format translate
 android_lint_translate_checkstyle_format translate --file="checkstyle.xml"
 ```
 
+### Use from ruby script
+
+```ruby
+require 'android_lint_translate_checkstyle_format'
+android_lint_xml = ::AndroidLintTranslateCheckstyleFormat::Script.translate('<?xml ...')
+checkstyle_format.report_by_text android_lint_xml
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -51,4 +59,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
